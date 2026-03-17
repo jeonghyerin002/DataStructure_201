@@ -27,7 +27,7 @@ public class TestLinkedList<T>
     {
         if (head == null || current == null || newNode == null) //해드가 널 값이거나, 커런트가 널 값이거나, 뉴노드가 널 값이면
         {
-            //알아서 서비스내로 에러 수정 (수정 안되면 그 때 에러남
+            //알아서 서비스 내로 에러 수정 (수정 안되면 그 때 에러남
             throw new InvalidOperationException(); //이거 뭔데 인발리드오퍼래이션익셉션 뭔데 이거 여전히 모르겠어 이거 뭔데 ㅆㅂ 어쩌자고 어쩔까
         }
         newNode.Next = current.Next; //뭔데 ㅜ왜 뉴노드 넥스트가 커런트노드넥스트인데 이거 뭔데
