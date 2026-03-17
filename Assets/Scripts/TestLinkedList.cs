@@ -23,15 +23,17 @@ public class TestLinkedList<T>
             current.Next = newNode; //딱 여기까지 흐름만 이해함.
         }
     }
-    public void AddAfter(SinglyLinkedListNode<T> current, SinglyLinkedListNode<T> newNode)
+    public void AddAfter(SinglyLinkedListNode<T> current, SinglyLinkedListNode<T> newNode) //원하는 지점에 새로운 노드 생성
     {
         if (head == null || current == null || newNode == null) //해드가 널 값이거나, 커런트가 널 값이거나, 뉴노드가 널 값이면
         {
             //알아서 서비스 내로 에러 수정 (수정 안되면 그 때 에러남
             throw new InvalidOperationException(); //이거 뭔데 인발리드오퍼래이션익셉션 뭔데 이거 여전히 모르겠어 이거 뭔데 ㅆㅂ 어쩌자고 어쩔까
         }
-        newNode.Next = current.Next; //뭔데 ㅜ왜 뉴노드 넥스트가 커런트노드넥스트인데 이거 뭔데
-        current.Next = newNode; // 뭐 어쩌자고 왜 갑자기 커런트노드넥스트는 뉴노드인데 어떡하자고
+        newNode.Next = current.Next; //뉴노드 넥스트는 커런트 넥스트다 
+        current.Next = newNode; //커런트 넥스트는 뉴노드가 됨. ㄱㅁㄸ 이해함 드디어 ㅆㅂ 일대일로 알려줘야 이해함 미친 폐급년 학교에서 떠나라 정혜린
+        //[1][2][3][4]
+        //[2] ([10]) [3] 2는 커런트 3은 커런트넥스트 10은 뉴노드 10을 중간에 끼려면 뉴노드넥스트도 3이여야함.
     }
     public void Remove(SinglyLinkedListNode<T> removeNode)
     {
